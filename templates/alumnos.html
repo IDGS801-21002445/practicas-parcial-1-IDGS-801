@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block conteiner %}
+{% import "_macros.html" as macros %}
+    <h1>Hola desde Alumnos !!</h1>
+    <title>Alumnos</title>
+    <form action="">
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.nombre,class="form-control")}}
+            </div>
+        </div>
+       
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.apaterno,class="form-control")}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.amaterno,class="form-control")}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.email,class="form-control")}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.edad,class="form-control")}}
+            </div>
+        </div>
+        <!-- {{macros.datos("Nombre","NOMBRE")}}
+        {{macros.datos("Sueldo","SUELDO", "")}}
+        {{form.nombre}}
+        {{form.apaterno}}
+        {{form.amaterno}} -->
+    </form>
+    
+{% endblock %}
