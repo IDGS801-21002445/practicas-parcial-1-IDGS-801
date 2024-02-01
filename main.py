@@ -62,6 +62,7 @@ def distancia():
     y2 = float
     d  = float
     
+    
     distancia=forms.UserForm(request.form)
     if request.method == "POST" :
         x1 = distancia.x1.data
