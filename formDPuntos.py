@@ -10,13 +10,8 @@ from wtforms.validators import DataRequired,Email
 
 
 class UserForm(Form):
-    # nombre = StringField('nombre')
-    # email = StringField("email")
-    # apaterno = TelField("apaterno")
-    # amaterno = StringField('amamterno')
-    # edad = IntegerField('edad') 
-    x1 = IntegerField("x1")
-    x2 = IntegerField("x2")
-    y1 = IntegerField("y1")
-    y2 = IntegerField('y2')
+    x1 = StringField("x1")
+    x2 = StringField("x2")
+    y1 = TelField("y1")
+    y2 = StringField('y2')
     d = IntegerField('d')
