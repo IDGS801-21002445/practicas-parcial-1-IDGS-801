@@ -15,3 +15,4 @@ class UserForm(Form):
     y1 = TelField("y1")
     y2 = StringField('y2')
     d = IntegerField('d')
+

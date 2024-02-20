@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block conteiner %}
+{% import "_macrosDiccionario.html" as macros %}
+    <h1>Diccionario de palabras !!</h1>
+    <title>Diccioanrio</title>
+    <form action="" method="POST" novalidate>
+        <div class="d-block">
+            <h4>Registrar</h4>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group control">
+                    {{macros.camposNuevos(form.palabra,class="form-control")}}
+                </div>
+            </div>
+           
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group control">
+                    {{macros.camposNuevos(form.word,class="form-control")}}
+                </div>
+            </div>
+            <input type="submit" id="btn1" name="submit_button" value="Registrar" class="btn-success" style="margin:10px;">
+
+            <h4>Buscar</h4>
+
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group control">
+                    {{macros.camposNuevos(form.buscar,class="form-control")}}
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group control">
+                    {{macros.camposNuevos(form.idioma,class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>Respuesta del archivo:</h4>
+            <h4>{{traducir}}</h4>
+        </div>
+
+        <input type="submit" id="btn2" name="submit_button" value="buscar" class="btn-primary" style="margin:10px;">
+    </form>
+    
+{% endblock %}

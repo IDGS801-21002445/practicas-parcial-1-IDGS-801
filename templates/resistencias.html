@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block conteiner %}
+{% import "_macrosResistencias.html" as macros %}
+    <title>resistencias</title>
+    <form action="" method="POST" novalidate>
+        <center>
+    <h1>Resistencias !!</h1>
+
+
+        <div class="row control-group">
+            <div class="drow">
+                <div class="form-group col-xs-12 floating-label-form-group control">
+                    {{macros.camposNuevos(form.ban1,class="form-control")}}
+                    
+                </div>
+            </div>
+        </div>
+       
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.ban2,class="form-control")}}
+            </div>
+        </div>
+
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.ban3,class="form-control")}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.tole,class="form-control")}}
+            </div>
+        </div>
+        <button type="submit" id="btn1" class="btn btn-primary">Calcular </button>
+    </center>
+
+        <!-- <input type="submit" id="btn1" value="Calcular"> -->
+    </form>
+
+    <table class="table">
+        <th class="thead-dark">
+            <td scope="col">Color Banda1</td>
+            <td class="col">Color Banda2</td>
+            <td class="col">Color Banda3</td>
+            <td class="col">Tolerancia</td>
+            <td class="col">Valor (OMS)</td>
+            <td class="col">Máximo</td>
+            <td class="col">Mínimo</td>
+        </th>
+        <tbody>
+            <th>
+                <td class="col" style="background-color: {{ color_banda_1 }}; color:black;">{{ color_banda_1 }}</td>
+                <td class="col" style="background-color: {{ color_banda_2 }}; color:black;">{{ color_banda_2 }}</td>
+                <td class="col" style="background-color: {{ color_banda_3 }}; color:black;">{{ color_banda_3 }}</td>
+
+                <td class="col">{{reint}}</td>
+                <td class="col">{{tole}}</td>
+                <td class="col">{{max}}</td>
+                <td class="col">{{min}}</td>
+            </th>
+        </tbody>
+       </table>
+    
+{% endblock %}
